@@ -11,3 +11,5 @@ services:
     command: sh -c "python manage.py runserver 0.0.0.0:8000"
     environment:
       - DEBUG=1
+
+# To run this on locally: docker-compose -f docker-compose.yml up --build
