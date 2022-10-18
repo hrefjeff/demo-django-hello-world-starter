@@ -8,7 +8,7 @@ services:
       - static_data:/vol/web
     environment:
       - SECRET_KEY=samplesecret123
-      - ALLOWED_HOSTS=ec2-18-209-51-193.compute-1.amazonaws.com
+      - ALLOWED_HOSTS=ec2-18-209-51-193.compute-1.amazonaws.com,18.209.51.193
 
   proxy:
     build:
@@ -16,7 +16,7 @@ services:
     volumes:
       - static_data:/vol/static
     ports:
-      - "80:8080"
+      - "8080:8080"
     depends_on:
       - app
 
